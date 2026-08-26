@@ -4,14 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        nums1 = []
-        count=0
-        for i in nums :
-            for j in nums:
-                if j!=i and j<i:
-                    count+=1
-            nums1.append(count)
-            count=0
-        return nums1
+        ans = []
+        nums2 = sorted(nums)
+        for i in nums:
+            ans.append(nums2.index(i))
+        return ans 
+        
+
                     
         
